@@ -1,0 +1,162 @@
+:root {
+    --bg-color: #050505;
+    --card-bg: #151515;
+    --primary-blue: #2962ff;
+    --primary-blue-hover: #1e4bd1;
+    --text-white: #ffffff;
+    --text-gray: #b3b3b3;
+    --error-red: #ff3b30;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #222;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+input[type="url"],
+input[type="text"] {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #0a0a0a;
+    color: var(--text-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: var(--font-family);
+}
+
+input[type="url"]:focus,
+input[type="text"]:focus {
+    border-color: var(--primary-blue);
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-family);
+}
+
+button:hover {
+    background-color: var(--primary-blue-hover);
+    box-shadow: 0 0 15px rgba(41, 98, 255, 0.4);
+}
+
+/* Error Message */
+.error-msg {
+    color: var(--error-red);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Result Container */
+.result-container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.result-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+#short-url {
+    background-color: #1a1a1a;
+    border-color: #333;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.copy-btn {
+    width: auto;
+    padding: 0 1.5rem;
+    background-color: #333;
+}
+
+.copy-btn:hover {
+    background-color: #444;
+    box-shadow: none;
+}
+
+/* Feedback state for copy button */
+.copy-btn.copied {
+    background-color: #00c853;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

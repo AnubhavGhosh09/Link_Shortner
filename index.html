@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Shortener</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>URL Shortener</h1>
+            <p>Simplify your links with one click.</p>
+        </header>
+
+        <section class="card">
+            <form id="shorten-form">
+                <div class="input-group">
+                    <input type="url" id="original-url" placeholder="Paste link here..." required autocomplete="off">
+                </div>
+                <!-- Error Message -->
+                <div id="error-msg" class="error-msg hidden">Please enter a valid URL.</div>
+                
+                <button type="submit" id="shorten-btn">
+                    Shorten
+                </button>
+            </form>
+
+            <!-- Result Container -->
+            <div id="result-container" class="result-container hidden">
+                <div class="input-group result-group">
+                    <input type="text" id="short-url" readonly>
+                    <button id="copy-btn" class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
