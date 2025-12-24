@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="main-container">
         <header>
-            <h1>URL Shortener</h1>
-            <p>Simplify your links with one click.</p>
+            <h1 class="animate-text">URL Shortener</h1>
+            <p class="subtitle animate-text delay-1">Simplify your digital footprint.</p>
+            <p class="description animate-text delay-2">
+                Transform long, clunky URLs into clean, manageable links.
+                Perfect for social media, marketing campaigns, and sharing content cleanly.
+                Fast, secure, and forever free.
+            </p>
         </header>
 
         <section class="card">
@@ -23,7 +30,7 @@
                 </div>
                 <!-- Error Message -->
                 <div id="error-msg" class="error-msg hidden">Please enter a valid URL.</div>
-                
+
                 <button type="submit" id="shorten-btn">
                     Shorten
                 </button>
@@ -40,4 +47,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
